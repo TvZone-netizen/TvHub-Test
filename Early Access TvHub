@@ -6,7 +6,7 @@ local Windows = NothingLibrary.new({
 	Logo = 'http://www.roblox.com/asset/?id'
 })
 
--- Tab for b1c2
+-- Tab b1c2
 local TabFrame_b1c2 = Windows:NewTab({
 	Title = "b1c2",
 	Description = "Exploit",
@@ -40,7 +40,7 @@ Section_b1c2:NewButton({
 	end,
 })
 
--- Tab for b1c3
+-- Tab b1c3
 local TabFrame_b1c3 = Windows:NewTab({
 	Title = "B1C3",
 	Description = "Auto Passes b1C3 For you",
@@ -74,15 +74,63 @@ Section_b1c3:NewButton({
 	end,
 })
 
--- Tab for b2c3 (ESP Yen moved here)
+-- Tab b1c4
+local TabFrame_b1c4 = Windows:NewTab({
+	Title = "B1C4",
+	Description = "Hardest one to make...",
+	Icon = "rbxassetid://"
+})
+
+local Section_b1c4 = TabFrame_b1c4:NewSection({
+	Title = "Part 1 Auto Pass",
+	Icon = "rbxassetid://",
+	Position = "Left"
+})
+
+Section_b1c4:NewButton({
+	Title = "Part 1 Auto Pass",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
+	end,
+})
+
+Section_b1c4:NewButton({
+	Title = "TvZone Was Too Tired to make butterfly",
+	Callback = function()
+		-- No action for now
+	end,
+})
+
+Section_b1c4:NewButton({
+	Title = "Kusonoki Auto Pass",
+	Callback = function()
+		local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
+		local autoburn = workspace.Well.Burner
+
+		for _, curseditems2 in ipairs(curseditems) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(curseditems2.Position)
+			task.wait(0.3)
+			fireproximityprompt(curseditems2.ProximityPrompt)
+		end
+
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.9511108398438, 26.722492218017578, 2252.857421875)
+		task.wait(0.5)
+		for i = 1, 6 do
+			fireproximityprompt(autoburn.ProximityPrompt)
+			task.wait(0.3)
+		end
+	end,
+})
+
+-- Tab b2c3
 local TabFrame_b2c3 = Windows:NewTab({
 	Title = "B2C3",
-	Description = "TvZone needs a Brazilian to learn lua",
+	Description = "TvZone needs a Brazilian to learn Lua",
 	Icon = "rbxassetid://"
 })
 
 local Section_b2c3 = TabFrame_b2c3:NewSection({
-	Title = "Check these out",
+	Title = "Auto Pass And Go To train directly",
 	Icon = "rbxassetid://",
 	Position = "Left"
 })
@@ -90,11 +138,24 @@ local Section_b2c3 = TabFrame_b2c3:NewSection({
 Section_b2c3:NewButton({
 	Title = "Auto Pass And Go To train directly",
 	Callback = function()
-		-- No callback defined for this button
+		-- No action for now
 	end,
 })
 
-Section_b2c3:NewButton({
+-- Tab b2c4
+local TabFrame_b2c4 = Windows:NewTab({
+	Title = "B2C4",
+	Description = "Esp Yen",
+	Icon = "rbxassetid://"
+})
+
+local Section_b2c4 = TabFrame_b2c4:NewSection({
+	Title = "esp Yen",
+	Icon = "rbxassetid://",
+	Position = "Left"
+})
+
+Section_b2c4:NewButton({
 	Title = "esp Yen",
 	Callback = function()
 		local RunService = game:GetService("RunService")
