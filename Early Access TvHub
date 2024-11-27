@@ -184,11 +184,11 @@ Section:NewSlider({
     Callback = function(Value)
         local AntiSpeed = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Anti-Speed") 
 
-        if AntiSpeed then
-            AntiSpeed:Destroy()
-        end
-
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    if AntiSpeed then
+      AntiSpeed:Destroy()
+    end
+    
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end,
 })
 
@@ -207,9 +207,10 @@ local Section = TabFrame:NewSection({
 Section:NewButton({
 	Title = "Auto Train",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.091796875, -7.329235076904297, 2261.81396484375)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.091796875, -7.329235076904297, 2261.81396484375)
 	end,
 })
+
 
 local Section = TabFrame:NewSection({
 	Title = "BoogeyMan",
@@ -220,5 +221,6 @@ local Section = TabFrame:NewSection({
 Section:NewButton({
 	Title = "Esp Larvae",
 	Callback = function()
+
 	end,
 })
